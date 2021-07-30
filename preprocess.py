@@ -82,6 +82,7 @@ def read_tfrecord(folder, batch=100, epoch=1):
     features = tf.parse_single_example(serialized_example, features= key_to_feature)
 
     img = tf.decoded_raw(features['encoded'], tf.uint8)
+    img = tf.reshape(img, [28, 28])
     lab = tf.cast(features['label'], tf.float32)
 
     img, lab = tf.train.shuffle_batch([img, lab], batch_size=batch)

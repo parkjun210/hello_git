@@ -8,7 +8,7 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_string('process', 'test', 'which process you want to do: write(write tfrecord file), train(train model), test(test model)')
 
-tf.flags.DEFINE_string('imagedir', '../mnist/train_img', 'directory where images are stored in')
+tf.flags.DEFINE_string('imagedir', '../mnist/train', 'directory where images are stored in')
 #tf.flags.DEFINE_string('imagedir', '../mnist/train_img', 'directory where images are stored in')
 
 tf.flags.DEFINE_string('datadir', '../mnist/test_tfrecord', 'directory where tfrecord files are stored in')
